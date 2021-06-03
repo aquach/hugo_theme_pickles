@@ -75,6 +75,7 @@ ol {
 
 li {
   font-size: 1.8rem;
+  font-weight: 300;
 }
 
 dt {
@@ -95,6 +96,11 @@ pre {
   font-size: 1.2rem;
   word-wrap: break-word;
   overflow: auto;
+}
+
+pre code {
+  line-height: 1.4;
+  font-size: 1.4rem;
 }
 
 code {
