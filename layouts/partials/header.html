@@ -6,7 +6,7 @@
   {{ partial "svgpack-sprite.html" . }}
   <header class="l-header">
     {{ if .IsPage }}
-    <p class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></p>
+    <h1 class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
     {{ else }}
     <h1 class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
     {{ end }}
