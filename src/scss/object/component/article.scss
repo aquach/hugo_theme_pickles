@@ -17,10 +17,11 @@
   &__meta {
     font-size: 2rem;
     line-height: 1;
-    padding-right: 1em;
+    padding-right: 1.5em;
     width: 7em;
     flex-grow: 0;
     flex-shrink: 0;
+    text-align: right;
   }
 
   &__summary {
