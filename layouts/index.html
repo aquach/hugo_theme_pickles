@@ -1,9 +1,13 @@
 {{ partial "header.html" . }}
 
-{{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "posts") ".Params.hidden" "!=" "true" )).Pages }}
-  {{if ne $index 0 }}
-    {{ end }}
-  {{ .Render "li" }}
+{{ range $index, $page := (.Paginate (where .Site.RegularPages ".Params.hidden" "!=" "true" )).Pages }}
+  {{if eq .Type "videos" }}
+    {{ .Render "video" }}
+  {{ end }}
+
+  {{if eq .Type "posts" }}
+    {{ .Render "li" }}
+  {{ end }}
 {{ end }}
 
 {{ partial "pagination.html" .Paginator }} {{ partial "siteinfo.html" . }}
