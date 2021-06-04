@@ -39,10 +39,6 @@
   <!-- Hugo Version Number -->
   {{ hugo.Generator -}}
 
-  {{ if not .Site.IsServer }}
-  {{ template "_internal/google_analytics_async.html" . }}
-  {{ end }}
-
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
   <!-- Custom css files as define in config.toml -->
   {{ range ($.Param "custom_css") -}}
@@ -57,6 +53,6 @@
   {{ end -}}
   {{ end }}
   {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
-  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bundle.js"></script>
+  <!-- <script type="text/javascript" src="{{ .Site.BaseURL }}js/bundle.js"></script> -->
   {{ partial "head_custom.html" . }}
 </head>
